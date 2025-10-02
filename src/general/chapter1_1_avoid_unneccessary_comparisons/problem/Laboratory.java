@@ -1,20 +1,15 @@
-package general.avoid_unneccessary_comparisons1_1.solution;
+package general.chapter1_1_avoid_unneccessary_comparisons.problem;
 
 import general.Microscope;
 import general.Result;
 import general.Sample;
 
-/*
-*   불린 표현식은 비교하지 않아도 된다.
-*   비교는 코드 가독성이 좋지 않음.
-*
-* */
 public class Laboratory {
 
     Microscope microscope;
 
     Result analyze(Sample sample) {
-        if (microscope.isInorganic(sample)) {
+        if (microscope.isInorganic(sample) == true) {
             return Result.INORGANIC;
         }else {
             return analyzeOrganic(sample);
@@ -22,7 +17,7 @@ public class Laboratory {
     }
 
     private Result analyzeOrganic(Sample sample) {
-        if (!microscope.isHumanoid(sample)) {
+        if (!microscope.isHumanoid(sample) == false) {
             return Result.ALIEN;
         }
         else {

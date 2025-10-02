@@ -1,25 +1,26 @@
-package general.avoid_unneccessary_comparisons1_1.problem;
+package general.chapter1_2_avoid_negations.problem;
 
-import general.Result;
 import general.Microscope;
+import general.Result;
 import general.Sample;
 
-class Laboratory {
+public class Laboratory {
 
     Microscope microscope;
 
     Result analyze(Sample sample) {
-        if (microscope.isInorganic(sample) == true) {
+        if (microscope.isInorganic(sample)) {
             return Result.INORGANIC;
-        } else {
+        }else {
             return analyzeOrganic(sample);
         }
     }
 
     private Result analyzeOrganic(Sample sample) {
-        if (microscope.isHumanoid(sample) == false) {
+        if (!microscope.isHumanoid(sample)) {
             return Result.ALIEN;
-        } else {
+        }
+        else {
             return Result.HUMANOID;
         }
     }
