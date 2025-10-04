@@ -4,6 +4,7 @@ import general.Microscope;
 import general.Result;
 import general.Sample;
 
+
 public class Laboratory {
 
     Microscope microscope;
