@@ -5,7 +5,7 @@ import general.User;
 
 import java.util.Objects;
 
-public class BoardComputer {
+class BoardComputer {
 
     CruiseControl cruiseControl;
 
@@ -15,9 +15,9 @@ public class BoardComputer {
             case UNKNOWN:
                 cruiseControl.logUnauthorizedAccessAttempt();
             case ASTRONAUT:
-                cruiseControl.grantAccess(user);;
+                cruiseControl.grantAccess(user);
                 break;
-            case  COMMANDER:
+            case COMMANDER:
                 cruiseControl.grantAccess(user);
                 cruiseControl.grantAdminAccess(user);
                 break;
