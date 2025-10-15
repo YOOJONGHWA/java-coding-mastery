@@ -1,15 +1,13 @@
-package general.chapter2_1_replace_magic_numbers_with_constant.solution;
-
+package general.chapter2_2_favor_enums_over_integer_constants.problem;
 
 class CruiseControl {
-
     static final int STOP_PRESET = 0;
     static final int PLANETARY_SPEED_PRESET = 1;
     static final int CRUISE_SPEED_PRESET = 2;
 
-    static final double CRUISE_SPEED_KMH = 16944;
-    static final double PLANETARY_SPEED_KMH = 7667;
     static final double STOP_SPEED_KMH = 0;
+    static final double PLANETARY_SPEED_KMH = 7667;
+    static final double CRUISE_SPEED_KMH = 16944;
 
     private double targetSpeedKmh;
 
@@ -23,20 +21,18 @@ class CruiseControl {
         }
     }
 
-    void setTargetSpeedKmh(double speed) {
-        targetSpeedKmh = speed;
+    void setTargetSpeedKmh(double speedKmh) {
+        targetSpeedKmh = speedKmh;
     }
 }
 
 class Main {
-    static final int STOP_PRESET = 0;
     static final int PLANETARY_SPEED_PRESET = 1;
-    static final int CRUISE_SPEED_PRESET = 2;
 
     static void usage() {
         CruiseControl cruiseControl = null;
         cruiseControl.setPreset(PLANETARY_SPEED_PRESET);
-        cruiseControl.setPreset(CRUISE_SPEED_PRESET);
-        cruiseControl.setPreset(-1);
+        cruiseControl.setPreset(2);
+        cruiseControl.setPreset(-1); // targetSpeed not affected
     }
 }

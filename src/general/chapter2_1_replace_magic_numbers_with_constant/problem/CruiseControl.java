@@ -1,6 +1,6 @@
 package general.chapter2_1_replace_magic_numbers_with_constant.problem;
 
-public class CruiseControl {
+class CruiseControl {
 
     private double targetSpeedKmh;
 
@@ -9,12 +9,21 @@ public class CruiseControl {
             setTargetSpeedKmh(16944);
         } else if (speedPreset == 1) {
             setTargetSpeedKmh(7667);
-        } else if (speedPreset == 0 ) {
+        } else if (speedPreset == 0) {
             setTargetSpeedKmh(0);
         }
     }
 
-    private void setTargetSpeedKmh(double speed) {
+    void setTargetSpeedKmh(double speed) {
         targetSpeedKmh = speed;
+    }
+}
+
+class Main {
+    static void usage() {
+        CruiseControl cruiseControl = null;
+        cruiseControl.setPreset(1);
+        cruiseControl.setPreset(2);
+        cruiseControl.setPreset(-1);
     }
 }
