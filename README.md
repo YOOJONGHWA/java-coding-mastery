@@ -15,3 +15,4 @@
 ## 2장 Level Up Your Code Style
 ### 2.1 매직 넘버를 상수로 대체
 ### 2.2 정수 상수 대신 열거형
+### 2.3 For 루프 대신 For-Each
